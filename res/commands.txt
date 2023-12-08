@@ -1,0 +1,240 @@
+#load film_original.jpg and call it 'film'
+load images\film_original.jpg film
+
+#extract red component of 'film' as an image 'filmRedComponent'
+red-component film filmRedComponent
+
+#extract blue component of 'film' as an image 'filmBlueComponent'
+blue-component film filmBlueComponent
+
+#extract green component of 'film' as an image 'filmGreenComponent'
+green-component film filmGreenComponent
+
+#produce a sepia-toned version of 'film' as an image 'filmSepia'
+sepia film filmSepia
+
+#produce a blurred version of 'film' as an image 'filmBlur'
+blur film filmBlur
+
+#produce a sharpened version of 'film' as an image 'filmSharpen'
+sharpen film filmSharpen
+
+#create a greyscale using only the value component, as an image 'filmValue'
+value-component film filmValue
+
+#create a greyscale using only the luma component, as an image 'filmLuma'
+luma-component film filmLuma
+
+#create a greyscale using only the luma component, as an image 'filmIntensity'
+intensity-component film filmIntensity
+
+#flip 'film' horizontally and store it as an image 'filmHFlip'
+horizontal-flip film filmHFlip
+
+#flip 'film' vertically and store it as an image 'filmVFlip'
+vertical-flip film filmVFlip
+
+#brighten 'film' by adding 70 and store it as an image 'filmBrighter'
+brighten 70 film filmBrighter
+
+#darken 'film' by adding -70 and store it as an image 'filmDarker'
+brighten -70 film filmDarker
+
+#split 'film' into its red, green and blue components, as images 'redSplit', 'greenSplit',
+#'blueSplit'
+rgb-split film redSplit greenSplit blueSplit
+
+#combine 'redSplit', 'greenSplit', 'blueSplit' into an image 'filmCombined'
+rgb-combine filmCombined redSplit greenSplit blueSplit
+
+#save 'filmRedComponent' as 'filmRedComponent.png'
+save images\filmRedComponent.png filmRedComponent
+
+#save 'filmGreenComponent' as 'filmGreenComponent.png'
+save images\filmGreenComponent.png filmGreenComponent
+
+#save 'filmBlueComponent' as 'filmBlueComponent.jpg'
+save images\filmBlueComponent.jpg filmBlueComponent
+
+#save 'filmBlur' as 'filmBlur.jpg'
+save images\filmBlur.jpg filmBlur
+
+#save 'filmSharpen' as 'filmSharpen.jpeg'
+save images\filmSharpen.jpeg filmSharpen
+
+#save 'filmSepia' as 'filmSepia.png'
+save images\filmSepia.png filmSepia
+
+#save 'filmValue' as 'filmValue.jpg'
+save images\filmValue.jpg filmValue
+
+#save 'filmLuma' as 'filmLuma.jpeg'
+save images\filmLuma.jpeg filmLuma
+
+#save 'filmIntensity' as 'filmIntensity.jpeg'
+save images\filmIntensity.jpg filmIntensity
+
+#save 'filmHFlip' as 'filmHFlip.png'
+save images\filmHFlip.png filmHFlip
+
+#save 'filmVFlip' as 'filmVFlip.png'
+save images\filmVFlip.png filmVFlip
+
+#save 'filmBrighter' as 'filmBrighter.jpg'
+save images\filmBrighter.jpg filmBrighter
+
+#save 'filmDarker' as 'filmDarker.png'
+save images\filmDarker.png filmDarker
+
+#save 'blueSplit' as 'blueSplit.jpg'
+save images\blueSplit.jpg blueSplit
+
+#save 'greenSplit' as 'greenSplit.jpeg'
+save images\greenSplit.jpeg greenSplit
+
+#save 'redSplit' as 'redSplit.png'
+save images\redSplit.png redSplit
+
+#save 'filmCombined' as 'filmCombined.jpg'
+save images\filmCombined.jpg filmCombined
+
+#give 'film' a green tint and save the image as 'filmGreenTint.jpg'
+rgb-split film filmRedComp2 filmGreenComp2 filmBlueComp2
+brighten 50 filmGreenComp2 filmGreenComp2
+rgb-combine filmGreenTint filmRedComp2 filmGreenComp2 filmBlueComp2
+save images\filmGreenTint.jpg filmGreenTint
+
+#save 'filmIntensity' as 'filmIntensity.ppm'
+save images\filmIntensity.ppm filmIntensity
+
+#flip the 'flipHFlip' vertically and store as an image 'flipHFlipVFlip'
+vertical-flip filmHFlip filmHFlipVFlip
+
+#save 'filmHFlipVFlip' as 'filmHFlipVFlip.png'
+save images\filmHFlipVFlip.png filmHFlipVFlip
+
+#compress 'film' by 20% as 'filmCompress20'
+compress 20 film filmCompress20
+
+#save 'filmCompress20' as 'filmCompress20.jpg'
+save images\filmCompress20.jpg filmCompress20
+
+#create histogram for 'filmCompress20'
+histogram filmCompress20 filmCompress20Hist
+
+#save 'filmCompress20Hist' as 'filmCompress20.png'
+save images\filmCompress20Hist.jpg filmCompress20Hist
+
+#compress 'film' by 50% as 'filmCompress50'
+compress 50 film filmCompress50
+
+#save 'filmCompress50' as 'filmCompress50.jpg'
+save images\filmCompress50.jpg filmCompress50
+
+#create histogram for 'filmCompress50'
+histogram filmCompress50 filmCompress50Hist
+
+#save 'filmCompress50Hist' as 'filmCompress50.png'
+save images\filmCompress50Hist.jpg filmCompress50Hist
+
+#compress 'film' by 90% as 'filmCompress90'
+compress 90 film filmCompress90
+
+#save 'filmCompress90' as 'filmCompress90.jpg'
+save images\filmCompress90.jpg filmCompress90
+
+#create histogram for 'filmCompress90'
+histogram filmCompress90 filmCompress90Hist
+
+#save 'filmCompress90Hist' as 'filmCompress90.png'
+save images\filmCompress90Hist.jpg filmCompress90Hist
+
+#create histogram for 'film' as 'filmOriginalHist'
+histogram film filmOriginalHist
+
+#save 'filmOriginalHist' as 'filmOriginalHist.jpeg'
+save images\filmOriginalHist.jpeg filmOriginalHist
+
+#color-correct 'film' as 'filmColorCorrect'
+color-correct film filmColorCorrect
+
+#save 'filmColorCorrect' as 'filmColorCorrect.png'
+save images\filmColorCorrect.png filmColorCorrect
+
+#create histogram for 'filmColorCorrect' as 'filmColorCorrectHist'
+histogram filmColorCorrect filmColorCorrectHist
+
+#save 'filmColorCorrectHist' as 'filmColorCorrectHist.jpg'
+save images\filmColorCorrectHist.jpg filmColorCorrectHist
+
+#adjust levels for 'film' as 'filmLevelsAdjust'
+levels-adjust 20 100 255 film filmLevelsAdjust
+
+#save 'filmLevelsAdjust' as 'filmLevelsAdjust.png'
+save images\filmLevelsAdjust.png filmLevelsAdjust
+
+#create histogram for 'filmLevelsAdjust' as 'filmLevelsAdjustHist'
+histogram filmLevelsAdjust filmLevelsAdjustHist
+
+#save 'filmLevelsAdjustHist' as 'filmLevelsAdjustHist.png'
+save images\filmLevelsAdjustHist.png filmLevelsAdjustHist
+
+#adjust levels for 'film' as 'filmLevelsAdjust2'
+levels-adjust 100 133 255 film filmLevelsAdjust2
+
+#save 'filmLevelsAdjust2' as 'filmLevelsAdjust2.png'
+save images\filmLevelsAdjust2.png filmLevelsAdjust2
+
+#create histogram for 'filmLevelsAdjust2' as 'filmLevelsAdjust2Hist'
+histogram filmLevelsAdjust2 filmLevelsAdjust2Hist
+
+#save 'filmLevelsAdjust2Hist' as 'filmLevelsAdjust2Hist.png'
+save images\filmLevelsAdjust2Hist.png filmLevelsAdjust2Hist
+
+#produce a 50% split sepia-toned version of 'film' as an image 'filmSepiaSplit50'
+sepia film filmSepiaSplit50 split 50
+
+#save 'filmSepiaSplit50' as 'filmSepiaSplit50.jpg'
+save images\filmSepiaSplit50.jpg filmSepiaSplit50
+
+#produce a 30% blurred version of 'film' as an image 'filmBlurSplit30'
+blur film filmBlurSplit30 split 30
+
+#save 'filmBlurSplit30' as 'filmBlurSplit30.jpeg'
+save images\filmBlurSplit30.jpeg filmBlurSplit30
+
+#produce a 30% sharpened version of 'film' as an image 'filmSharpenSplit30'
+sharpen film filmSharpenSplit30 split 30
+
+#save 'filmSharpenSplit30' as 'filmSharpenSplit30.jpeg'
+save images\filmSharpenSplit30.jpeg filmSharpenSplit30
+
+#create an 60% split greyscale using only the luma component, as an image 'filmLumaSplit60'
+luma-component film filmLumaSplit60 split 60
+
+#save 'filmLumaSplit60' as 'filmLumaSplit60.png'
+save images\filmLumaSplit60.png filmLumaSplit60
+
+#create an 60% split greyscale using only the value component, as an image 'filmValueSplit60'
+value-component film filmValueSplit60 split 60
+
+#save 'filmValueSplit60' as 'filmValueSplit60.png'
+save images\filmValueSplit60.png filmValueSplit60
+
+#create an 60% split greyscale using only the intensity component, as an image 'filmIntensitySplit60'
+intensity-component film filmIntensitySplit60 split 60
+
+#save 'filmIntensitySplit60' as 'filmIntensitySplit60.png'
+save images\filmIntensitySplit60.png filmIntensitySplit60
+
+#adjust levels for 'film' as 'filmLevelsAdjustSplit40', with 40% split view
+levels-adjust 20 100 255 film filmLevelsAdjustSplit40 split 40
+
+#save 'filmLevelsAdjustSplit40' as 'filmLevelsAdjustSplit40.png'
+save images\filmLevelsAdjustSplit40.png filmLevelsAdjustSplit40
+
+#color-correct 'film' as 'filmColorCorrectSplit70', with 70% split view
+color-correct film filmColorCorrectSplit70 split 70
+
+#save 'filmColorCorrectSplit70' as 'filmColorCorrectSplit70.png'
+save images\filmColorCorrectSplit70.png filmColorCorrectSplit70
